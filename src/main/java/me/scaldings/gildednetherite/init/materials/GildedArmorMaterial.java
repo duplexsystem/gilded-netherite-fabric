@@ -1,11 +1,10 @@
 package me.scaldings.gildednetherite.init.materials;
 
-import me.scaldings.gildednetherite.init.Items;
+import me.scaldings.gildednetherite.GildedNetherite;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -18,7 +17,7 @@ import java.util.function.Supplier;
 public enum GildedArmorMaterial implements ArmorMaterial
 {
     GILDED("gilded", 40, new int[]{3, 6, 8, 3}, 23 , SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.2F, 0.15F, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier(Items.MOD_ID, "gilded_ingot")));
+        return Ingredient.ofItems(Registry.ITEM.get(new Identifier(GildedNetherite.MOD_ID, "gilded_ingot")));
     });
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
@@ -59,7 +58,7 @@ public enum GildedArmorMaterial implements ArmorMaterial
     }
 
     public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredientSupplier.get();
+        return this.repairIngredientSupplier.get();
     }
 
     @Environment(EnvType.CLIENT)

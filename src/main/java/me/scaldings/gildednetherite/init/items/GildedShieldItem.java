@@ -4,5 +4,7 @@ import net.minecraft.item.ShieldItem;
 
 public class GildedShieldItem extends ShieldItem
 {
-    public GildedShieldItem(Settings settings) {super(settings);}
+    public GildedShieldItem(Settings settings) {
+        super(settings);
+    }
 }

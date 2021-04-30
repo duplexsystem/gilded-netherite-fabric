@@ -1,7 +1,6 @@
 package me.scaldings.gildednetherite.init.materials;
 
-import me.scaldings.gildednetherite.init.Items;
-import net.minecraft.item.ItemStack;
+import me.scaldings.gildednetherite.GildedNetherite;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Identifier;
@@ -13,7 +12,7 @@ import java.util.function.Supplier;
 public enum GildedToolMaterial implements ToolMaterial
 {
     GILDED(4, 2258, 10.0F, 4.2F, 23, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier(Items.MOD_ID, "gilded_ingot")));
+        return Ingredient.ofItems(Registry.ITEM.get(new Identifier(GildedNetherite.MOD_ID, "gilded_ingot")));
     });
 
     private final int miningLevel;
@@ -53,6 +52,6 @@ public enum GildedToolMaterial implements ToolMaterial
     }
 
     public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredient.get();
+        return this.repairIngredient.get();
     }
 }

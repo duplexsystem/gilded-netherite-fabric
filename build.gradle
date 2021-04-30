@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.5-SNAPSHOT'
+	id 'fabric-loom' version '0.7-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -11,7 +11,10 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	 maven { url 'https://jitpack.io' }
+	maven { url 'https://jitpack.io' }
+	maven { url 'https://maven.shedaniel.me/' }
+	maven { url 'https://maven.terraformersmc.com/' }
+	maven { url 'https://maven.abusedmaster.xyz/' }
 }
 
 dependencies {
@@ -24,12 +27,15 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// PigLib
-	modApi "com.github.Shnupbups:Piglib:1.0.1"
-	include "com.github.Shnupbups:Piglib:1.0.1"
+	modImplementation "com.github.Shnupbups:Piglib:${project.piglib_version}"
+	include "com.github.Shnupbups:Piglib:${project.piglib_version}"
 
 	// Multi Item Lib
-	modImplementation 'com.github.OroArmor:Multi-Item-Lib:-SNAPSHOT'
-	include 'com.github.OroArmor:Multi-Item-Lib:-SNAPSHOT'
+	modImplementation "com.github.OroArmor:Multi-Item-Lib:${project.multiitemlib_version}"
+	include "com.github.OroArmor:Multi-Item-Lib:${project.multiitemlib_version}"
+
+	// Trinkets
+	modImplementation "dev.emi:trinkets:${project.trinkets_version}"
 }
 
 processResources {
