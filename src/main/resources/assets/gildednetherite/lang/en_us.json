@@ -8,7 +8,6 @@
   "item.gildednetherite.gilded_leggings": "Gilded Netherite Leggings",
   "item.gildednetherite.gilded_boots": "Gilded Netherite Boots",
   "item.gildednetherite.gilded_sword": "Gilded Netherite Sword",
-  "item.gildednetherite.gilded_shield": "Gilded Shield",
   "item.gildednetherite.gilded_elytra": "Gilded Elytra",
   "item.gildednetherite.armored_gilded_elytra": "Armored Gilded Elytra",
 
@@ -22,5 +21,25 @@
   "advancements.gilded_hoe.title": "Bad Life Decisions",
   "advancements.gilded_hoe.description": "Just... why?",
   "advancements.gilded_elytra.title": "Fly With Style",
-  "advancements.gilded_elytra.description": "Obtain a Gilded Elytra"
+  "advancements.gilded_elytra.description": "Obtain a Gilded Elytra",
+
+  "item.gildednetherite.gilded_shield": "Gilded Shield",
+  "item.gildednetherite.gilded_shield.black": "Black Gilded Shield",
+  "item.gildednetherite.gilded_shield.red": "Red Gilded Shield",
+  "item.gildednetherite.gilded_shield.green": "Green Gilded Shield",
+  "item.gildednetherite.gilded_shield.brown": "Brown Gilded Shield",
+  "item.gildednetherite.gilded_shield.blue": "Blue Gilded Shield",
+  "item.gildednetherite.gilded_shield.purple": "Purple Gilded Shield",
+  "item.gildednetherite.gilded_shield.cyan": "Cyan Gilded Shield",
+  "item.gildednetherite.gilded_shield.light_gray": "Light Gray Gilded Shield",
+  "item.gildednetherite.gilded_shield.gray": "Gray Gilded Shield",
+  "item.gildednetherite.gilded_shield.pink": "Pink Gilded Shield",
+  "item.gildednetherite.gilded_shield.lime": "Lime Gilded Shield",
+  "item.gildednetherite.gilded_shield.yellow": "Yellow Gilded Shield",
+  "item.gildednetherite.gilded_shield.light_blue": "Light Blue Gilded Shield",
+  "item.gildednetherite.gilded_shield.magenta": "Magenta Gilded Shield",
+  "item.gildednetherite.gilded_shield.orange": "Orange Gilded Shield",
+  "item.gildednetherite.gilded_shield.white": "White Gilded Shield",
+
+  "block.gildednetherite.gilded_block": "Block of Gilded Netherite"
 }

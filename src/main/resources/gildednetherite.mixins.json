@@ -1,13 +1,13 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.scaldings.gildednetherite.mixins",
+  "package": "me.scaldings.gildednetherite.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-
-  ],
-  "client": [
-
+    "BrewingRecipeRegistryAccessor",
+    "MixinLivingEntity",
+    "MixinMobEntity",
+    "MixinShieldDecorationRecipe"
   ],
   "injectors": {
     "defaultRequire": 1

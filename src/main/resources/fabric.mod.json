@@ -1,12 +1,13 @@
 {
   "schemaVersion": 1,
   "id": "gildednetherite",
-  "version": "1.6.0",
+  "version": "1.7.0",
 
   "name": "Gilded Netherite",
   "description": "This mod adds Gilded Netherite armor and tools.",
   "authors": [
-    "scaldings"
+    "scaldings",
+    "duplexsystem"
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/gilded-netherite-for-fabric",
@@ -29,8 +30,5 @@
     "fabricloader": ">=0.7.4",
     "fabric": "*",
     "minecraft": "1.16.x"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }

@@ -1,6 +1,8 @@
 package me.scaldings.gildednetherite.render.elytra;
 
+import me.scaldings.gildednetherite.GildedNetherite;
 import me.scaldings.gildednetherite.init.Items;
+import me.scaldings.gildednetherite.init.Trinkets;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumer;
@@ -14,20 +16,27 @@ import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
 public class GildedElytraFeatureRenderer<T extends LivingEntity, M extends EntityModel<T>> extends FeatureRenderer<T, M>
 {
-    public static final Identifier GILDED_ELYTRA_SKIN = new Identifier(Items.MOD_ID, "textures/entity/gilded_elytra.png");
+    public static final Identifier GILDED_ELYTRA_SKIN = new Identifier(GildedNetherite.MOD_ID, "textures/entity/gilded_elytra.png");
     private final ElytraEntityModel<T> elytra = new ElytraEntityModel();
     public GildedElytraFeatureRenderer(FeatureRendererContext<T, M> context) {super(context);}
 
     @Override
     public void render(MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, T livingEntity, float f, float g, float h, float j, float k, float l)
     {
-        ItemStack itemStack = livingEntity.getEquippedStack(EquipmentSlot.CHEST);
-        if (itemStack.getItem() == Items.GILDED_ELYTRA || itemStack.getItem() == Items.ARMORED_GILDED_ELYTRA) {
+        ItemStack itemStack;
+        if (livingEntity instanceof PlayerEntity && GildedNetherite.isTrinketsLoaded) {
+            itemStack = Trinkets.getChestCapeItemStack(livingEntity);
+        }
+        else {
+            itemStack = livingEntity.getEquippedStack(EquipmentSlot.CHEST);
+        }
+        if (itemStack.getItem() == Items.GILDED_ELYTRA) {
             Identifier identifier;
             if (livingEntity instanceof AbstractClientPlayerEntity) {
                 AbstractClientPlayerEntity abstractClientPlayerEntity = (AbstractClientPlayerEntity) livingEntity;
