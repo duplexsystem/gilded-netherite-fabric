@@ -1,4 +1,5 @@
 ![Fabric API required](https://cdn.discordapp.com/attachments/726579144615395329/739836321056555069/15964611033571741504164.png)
+[![Gilded Netherite Build Script](https://github.com/duplexsystem/gilded-netherite-fabric/actions/workflows/build.yml/badge.svg)](https://github.com/duplexsystem/gilded-netherite-fabric/actions/workflows/build.yml)
 
 # About Gilded Netherite for Fabric
 This mod adds Gilded Netherite, it increases the power of a regular Netherite  
