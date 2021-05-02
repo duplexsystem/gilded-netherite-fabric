@@ -6,7 +6,7 @@ jobs:
   build:
     strategy:
       matrix:
-        java: [ 1.8, 11, 16]
+        java: [ 8, 11, 16]
 
     runs-on: ubuntu-latest
 
